@@ -1,57 +1,3 @@
-/* Базовая структура — десктоп */
-body {
-  max-width: 1920px;
-  margin: 0 auto;
-  font-family: 'CustomFont', sans-serif;
-  font-size: 16px;
-}
-
-/* Адаптация под мобильные устройства */
-@media (max-width: 768px) {
-  body {
-    padding: 0 15px;
-    font-size: 14px;
-  }
-
-  header, footer, .content-wrapper {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .menu {
-    display: block;
-  }
-
-  .menu li {
-    display: block;
-    margin-bottom: 10px;
-  }
-
-  .hero-section {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .hero-section img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  .card {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-
-  .grid-3, .grid-4 {
-    display: block;
-  }
-
-  .btn {
-    width: 100%;
-    padding: 12px;
-    font-size: 16px;
-  }
-}
 @font-face {
     font-family: ReformaGrotesk-Medium;
     src: url(../fonts/ReformaGroteskMediumC.ttf);
@@ -65,7 +11,7 @@ body {
     src: url(../fonts/ReformaGroteskDemiC.ttf);
 }
 body {
-    width: 1920px;
+    max-width: 100%;
     margin: 0 auto;
     padding: 0;
     font-family: ReformaGrotesk-Demi;
@@ -909,4 +855,153 @@ footer > p {
     list-style-type: none;
     color: white;
     display: flex;
+}
+
+
+/* ===================== АДАПТИВ ДЛЯ ТЕЛЕФОНОВ ===================== */
+@media (max-width: 768px) {
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  header, .header {
+    height: auto;
+    background-size: cover;
+    background-position: center;
+  }
+
+  nav, .nav {
+    flex-direction: column;
+    padding-left: 0;
+    margin-top: 20px;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .humburger {
+    margin: 10px auto;
+    float: none;
+  }
+
+  .title > h1 {
+    font-size: 48px;
+    width: 90%;
+    height: auto;
+    margin-top: 50px;
+  }
+
+  .title > p {
+    font-size: 18px;
+    width: 90%;
+    height: auto;
+  }
+
+  .button {
+    width: 100%;
+    font-size: 18px;
+  }
+
+  .contacts {
+    flex-direction: column;
+    height: auto;
+    padding: 20px 0;
+  }
+
+  .contacts > div {
+    width: 100%;
+    height: auto;
+    border: none !important;
+    margin-bottom: 20px;
+  }
+
+  .achievements {
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+
+  .achieve_text > h2,
+  .achieve_text > p {
+    width: 100%;
+    font-size: 24px;
+  }
+
+  .achieves {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .pictures {
+    flex-direction: column;
+    padding: 40px 0;
+    align-items: center;
+  }
+
+  .picture_1, .picture_2, .picture_3 {
+    margin-right: 0;
+    width: 90%;
+    height: auto;
+  }
+
+  .photo_1, .photo_2, .photo_3 {
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+  }
+
+  .advantage {
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+
+  .list_adv,
+  .preview {
+    width: 100%;
+    height: auto;
+  }
+
+  .preview_slider {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service {
+    padding: 40px 20px;
+  }
+
+  .service_list {
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+  }
+
+  .service_list > div {
+    width: 100%;
+  }
+
+  .advantages {
+    flex-direction: column;
+    width: 100%;
+    padding: 40px 20px;
+  }
+
+  .preview_2,
+  .list_adv_2 {
+    width: 100%;
+    height: auto;
+    margin-left: 0;
+  }
+
+  .preview_slider_2 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h2, h3, h5 {
+    font-size: 20px !important;
+  }
+
+  p {
+    font-size: 16px !important;
+  }
 }
